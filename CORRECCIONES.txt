@@ -1,0 +1,7 @@
+*Me faltaba avisarle a los demas suscriptores de una
+partida cuando se agregaba una letra y cuando alguien
+habia ganado el juego.
+
+*Faltaba mostrar en le juego quien ganaba y su estado, 
+y agregar dos metodos rest para consultar quien gano, 
+el estado del juego
