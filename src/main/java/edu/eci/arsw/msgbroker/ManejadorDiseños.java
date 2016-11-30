@@ -15,6 +15,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class ManejadorDiseños {
      private final ConcurrentHashMap<String, Diseno> diseños = new ConcurrentHashMap<>();
+
+        public ManejadorDiseños() {
+            Diseno ds = new Diseno();
+            ds.setAlcance("largo");
+            ds.setCosto(100);
+            ds.setEmpleado("andres");
+            ds.setRecursos(100);
+            ds.setNombre("celu");
+            ds.setVoltaje(10);
+            diseños.put(ds.getNombre(),ds);
+        }
+     
+        
     
         public boolean consultarRespuesta(String ds){
             

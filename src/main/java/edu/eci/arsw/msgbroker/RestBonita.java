@@ -39,12 +39,12 @@ public class RestBonita {
         }
     }
     
-    @RequestMapping(value = "/addDiseño", method = RequestMethod.PUT)
-    public synchronized @ResponseBody
-    ResponseEntity<?> putDiseño(@RequestBody Diseno dis) {
+    @RequestMapping(value = "/addDiseno", method = RequestMethod.POST)
+    public synchronized ResponseEntity<?> putDiseño(@RequestBody Diseno dis) {
         try {
+            System.out.println("nombre: "+dis.getNombre());
             md.insertarDiseno(dis);
-            return new ResponseEntity<>("Diseño agregado correctamente", HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>("Eror al agregar diseño", HttpStatus.ACCEPTED);
 

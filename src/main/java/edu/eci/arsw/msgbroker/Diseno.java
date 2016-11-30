@@ -17,8 +17,11 @@ public class Diseno {
     private int voltaje = 0;
     private String alcance = "";
     private boolean resultado = false;   
-    
 
+    public Diseno() {
+    }
+    
+    
     public String getNombre() {
         return nombre;
     }
